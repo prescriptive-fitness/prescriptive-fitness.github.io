@@ -432,3 +432,15 @@ em.hl, .h-accent { font-style: italic; color: var(--red); font-weight: 800; }
   .dddc .rx__step:nth-child(even)::before { left: 20px; }
   .dddc .rx__tag { font-size: 48px; }
 }
+
+/* Home: trainer grid (photos share the team-* slots) */
+.trainers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px 28px; margin-top: 64px; }
+.trainer { display: block; text-decoration: none; color: var(--white); }
+.trainer .slot { transition: transform 300ms var(--ease); }
+.trainer:hover .slot { transform: translateY(-4px); }
+.trainer__name { display: block; margin-top: 18px; font: 700 22px/1.2 var(--display); font-stretch: 112%; }
+.trainer:hover .trainer__name { text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 6px; }
+.trainer__creds { display: block; margin-top: 6px; font: 600 12px/1.4 var(--display); font-stretch: 112%; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-on-black); }
+.trainer__focus { display: block; margin-top: 8px; font-size: 15px; line-height: 1.45; color: var(--mute-on-black); }
+.founder, .member { scroll-margin-top: 110px; }
+@media (max-width: 900px) { .trainers { grid-template-columns: 1fr 1fr; gap: 36px 16px; } .trainer__name { font-size: 18px; } }
