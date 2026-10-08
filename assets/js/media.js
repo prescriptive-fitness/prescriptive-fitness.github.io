@@ -31,7 +31,7 @@ window.PF_MEDIA = {
   "studio-04":         "",   // Studio gallery · coaching moment
   "studio-05":         "",   // Studio gallery · entrance / front desk
 
-  /* ---- Team page ---- */
+  /* ---- Team page (these portraits also fill the trainer grid on the home page) ---- */
   "team-hero":         "",   // Team page header · 16:9 · whole team or a coaching montage, silent loop
   "team-paul":         "",   // Team · 4:5 portrait
   "team-paul-video":   "",   // Team · 16:9 · Paul on his approach (optional)
