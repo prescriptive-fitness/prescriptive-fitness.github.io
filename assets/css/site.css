@@ -414,3 +414,21 @@ em.hl, .h-accent { font-style: italic; color: var(--red); font-weight: 800; }
 /* Book link lives in the button on desktop, in the list on mobile */
 .nav__mobile-only { display: none; }
 @media (max-width: 900px) { .nav__mobile-only { display: block; } }
+
+/* Oct 2026 revision: three-up proof strip, DDDC philosophy, mission quote */
+.proof__grid--3 { grid-template-columns: repeat(3, 1fr); }
+.dddc .rx__tag { font-size: 64px; color: var(--red); }
+.dddc .rx__step h3 { margin-top: 12px; }
+.mission { margin: 64px 0 0; max-width: 900px; padding-left: 28px; border-left: 3px solid var(--red); font: 500 italic clamp(20px, 2vw, 26px)/1.5 var(--body); color: rgba(255,255,255,0.9); }
+.mission cite { display: block; margin-top: 16px; font: 700 12px/1.2 var(--display); font-stretch: 112%; font-style: normal; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute-on-black); }
+@media (max-width: 900px) {
+  .proof__grid--3 { grid-template-columns: 1fr; }
+  .proof__grid--3 .proof__item { padding: 24px 0; border-left: 0; }
+  .proof__grid--3 .proof__item + .proof__item { border-top: 1px solid var(--line-on-black); }
+}
+@media (max-width: 640px) {
+  .dddc { grid-template-columns: 1fr 1fr; }
+  .dddc .rx__step:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--line-on-black); }
+  .dddc .rx__step:nth-child(even)::before { left: 20px; }
+  .dddc .rx__tag { font-size: 48px; }
+}
