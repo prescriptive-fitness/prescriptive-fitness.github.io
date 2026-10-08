@@ -20,9 +20,7 @@ window.PF_MEDIA = {
 
   /* ---- Home ---- */
   "home-hero":         "",   // Full-screen background · 16:9 · 15–30s silent loop of real sessions in the studio
-  "home-paul":         "",   // Owners section · 4:5 portrait of Paul in the studio
-  "home-sandy":        "",   // Owners section · 4:5 portrait of Sandy in the studio
-  "home-owners-video": "",   // Owners section · 16:9 · Paul & Sandy intro, 60–90s, talking to camera
+  "home-founders":     "",   // Founders section · 3:2 · Paul & Sandy coaching clients in the studio (keep it about the studio, not their online brand)
   "home-private":      "",   // Program card · 3:2 · trainer + client, one-on-one
   "home-semi":         "",   // Program card · 3:2 · two clients training together
   "home-golf":         "",   // Program card · 3:2 · golf rotation / TPI screen

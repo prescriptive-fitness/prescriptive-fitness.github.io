@@ -1,11 +1,11 @@
-/* Prescriptive Fitness · site behaviour: media slots, client stories, logo, mobile nav, consultation form. */
+/* Prescriptive Fitness · site behaviour: media slots, client stories, logo, mobile nav, get-started form. */
 (function () {
   "use strict";
   document.documentElement.classList.remove("no-js");
 
   /* ---------- Config ---------- */
   var CONTACT_EMAIL = "info@prescriptivefitness.com";
-  // Optional: paste a Formspree (or similar) endpoint here and the consultation form
+  // Optional: paste a Formspree (or similar) endpoint here and the Get Started form
   // submits straight to the inbox instead of opening the visitor's email app.
   var FORM_ENDPOINT = "";
 
@@ -176,7 +176,7 @@
     Array.prototype.forEach.call(reveals, function (el) { el.classList.add("is-in"); });
   }
 
-  /* ---------- Consultation request ---------- */
+  /* ---------- Get Started request ---------- */
   var form = document.getElementById("consult-form");
   var note = document.getElementById("consult-note");
   if (form) {
@@ -215,7 +215,7 @@
         }).then(function (res) {
           if (!res.ok) throw new Error();
           form.reset();
-          note.textContent = "Thank you. We'll call or email within one business day to set up your consultation.";
+          note.textContent = "Thank you. We'll be in touch soon.";
         }).catch(function () {
           note.textContent = "That didn't go through. Please call (980) 209-0410 or email " + CONTACT_EMAIL + ".";
         });
@@ -229,11 +229,11 @@
         "Interested in: " + d.interest + "\n" +
         "Best time to reach me: " + d.times + "\n" +
         (d.goals ? "\nGoals / history:\n" + d.goals + "\n" : "") +
-        "\nI'd like to book a consultation.";
+        "\nI'd like to get started.";
       window.location.href = "mailto:" + CONTACT_EMAIL +
-        "?subject=" + encodeURIComponent("Consultation request · " + d.name) +
+        "?subject=" + encodeURIComponent("New client inquiry · " + d.name) +
         "&body=" + encodeURIComponent(body);
-      note.textContent = "Your email app should open with your request filled in. Press send and we'll be in touch.";
+      note.textContent = "Your email app should open with your message filled in. Press send and we'll be in touch.";
     });
   }
 
